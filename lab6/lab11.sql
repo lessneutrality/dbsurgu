@@ -10,7 +10,7 @@ CREATE TABLE books (
     title VARCHAR(255),
     author_name VARCHAR(255),
     publisher_id INT,
-    FOREIGN KEY (publisher_id) REFERENCES Publishers(publisher_id)
+    FOREIGN KEY (publisher_id) REFERENCES publishers(publisher_id)
 );
 
 #2
@@ -25,7 +25,7 @@ CREATE TABLE raceResults (
     car_model VARCHAR(255),
     finish_time TIME,
     PRIMARY KEY (race_id, driver_id),
-    FOREIGN KEY (car_model) REFERENCES CarModels(car_model)
+    FOREIGN KEY (car_model) REFERENCES carModels(car_model)
 );
 
 #3
@@ -37,7 +37,7 @@ CREATE TABLE eventTypes (
 CREATE TABLE events (
     event_name VARCHAR(255) PRIMARY KEY,
     event_type VARCHAR(255),
-    FOREIGN KEY (event_type) REFERENCES EventTypes(event_type)
+    FOREIGN KEY (event_type) REFERENCES eventTypes(event_type)
 );
 
 CREATE TABLE roomBookings (
