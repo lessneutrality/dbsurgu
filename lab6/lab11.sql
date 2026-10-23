@@ -1,6 +1,6 @@
 #1
 CREATE TABLE Publishers (
-    publisher_id   INT PRIMARY KEY,
+    publisher_id INT PRIMARY KEY,
     publisher_name VARCHAR(255),
     publisher_city VARCHAR(100)
 );
@@ -15,14 +15,14 @@ CREATE TABLE Books (
 
 #2
 CREATE TABLE CarModels (
-    car_model        VARCHAR(100) PRIMARY KEY,
+    car_model VARCHAR(100) PRIMARY KEY,
     car_manufacturer VARCHAR(100)
 );
 
 CREATE TABLE RaceResults (
-    race_id     INT,
-    driver_id   INT,
-    car_model   VARCHAR(100),
+    race_id INT,
+    driver_id INT,
+    car_model VARCHAR(100),
     finish_time TIME,
     PRIMARY KEY (race_id, driver_id),
     FOREIGN KEY (car_model) REFERENCES CarModels(car_model)
